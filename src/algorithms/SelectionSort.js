@@ -11,7 +11,7 @@ class SelectionSort extends BaseSort {
           smallestIndex = j;
         }
       }
-      if (i < smallestIndex) {
+      if (i !== smallestIndex) {
         const temp = this.array[i];
         this.array[i] = this.array[smallestIndex];
         this.array[smallestIndex] = temp;

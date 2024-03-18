@@ -1,5 +1,6 @@
 import './styles/style.css';
 import BubbleSort from './algorithms/BubbleSort';
+import SelectionSort from './algorithms/SelectionSort';
 
 document.addEventListener('DOMContentLoaded', () => {
   const array = [7, 1, 5, 8, 3, 2, 4, 9, 6];
@@ -7,10 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const button = document.createElement('button');
   button.textContent = 'Button';
   button.addEventListener('click', () => {
-    const bubbleSort = new BubbleSort([...array2]);
-    console.log(bubbleSort.iterativeSort());
-    bubbleSort.setArray([...array2]);
-    console.log(bubbleSort.recursiveSort());
+    const selectionSort = new SelectionSort([...array2]);
+    console.log(selectionSort.recursiveSort());
   });
   document.body.appendChild(button);
 });

@@ -1,6 +1,6 @@
 import BaseSort from './BaseSort';
 
-class InsertionSearch extends BaseSort {
+class InsertionSort extends BaseSort {
   iterativeSort() {
     const n = this.array.length;
     if (n <= 1) return this.array;
@@ -30,4 +30,4 @@ class InsertionSearch extends BaseSort {
   }
 }
 
-export default InsertionSearch;
+export default InsertionSort;

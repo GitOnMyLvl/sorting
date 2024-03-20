@@ -12,9 +12,10 @@ class BaseSort {
     return new Promise((resolve) => { setTimeout(resolve, ms); });
   }
 
-  display(array, highlights) {
+  async display(array, highlights) {
     if (this.displayCallback) {
       this.displayCallback(array, highlights);
+      await BaseSort.delay(500);
     }
   }
 }

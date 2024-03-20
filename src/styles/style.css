@@ -8,7 +8,7 @@ body {
 .array-container{
   display: flex;
   gap: 1rem;
-  min-height: 200px;
+  min-height: 500px;
   padding: 10px;
   align-items: end;
 }
@@ -22,11 +22,11 @@ body {
   background-color: red;
 }
 
-.swap-target{
+.swap-target, .shifting{
   background-color: yellow;
 }
 
-.current{
+.current {
   background-color: green;
 }
 
@@ -34,6 +34,10 @@ body {
   background-color: red;
 }
 
-.pivot-final{
+.pivot-final, .swap, .shift-to{
   background-color: indigo;
+}
+
+.placed{
+  background-color: aqua;
 }

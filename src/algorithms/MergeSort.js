@@ -5,16 +5,13 @@ class MergeSort extends BaseSort {
     if (start >= end) return this.array;
     const middle = Math.floor((start + end) / 2);
     const preSortHighlights = { [start]: 'swap-target', [middle]: 'current', [end]: 'pivot' };
-    this.display(this.array, preSortHighlights);
-    await MergeSort.delay(1000);
+    await this.display(this.array, preSortHighlights);
 
     await this.recursiveSort(start, middle);
     await this.recursiveSort(middle + 1, end);
 
     await this.merge(start, middle, end);
-    const highlights = { [start]: 'swap-target', [middle]: 'current', [end]: 'pivot' };
-    this.display(this.array, highlights);
-    await MergeSort.delay(1000);
+    await this.display(this.array);
     return this.array;
   }
 
@@ -24,6 +21,9 @@ class MergeSort extends BaseSort {
     let right = middle + 1;
 
     while (left <= middle && right <= end) {
+      const nextElementIndex = (this.array[left] < this.array[right]) ? left : right;
+      const highlights = { [nextElementIndex]: 'swap' };
+      await this.display(this.array, highlights);
       if (this.array[left] < this.array[right]) {
         tempArray.push(this.array[left]);
         left += 1;
@@ -43,9 +43,11 @@ class MergeSort extends BaseSort {
 
     for (let i = start; i <= end; i += 1) {
       this.array[i] = tempArray[i - start];
+      const placementHighlight = { [i]: 'placed' };
+      await this.display(this.array, placementHighlight);
     }
 
-    this.display(this.array);
+    await this.display(this.array);
   }
 }
 

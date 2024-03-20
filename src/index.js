@@ -28,7 +28,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function mergeSorting() {
-    const array = [70, 10, 100, 50, 80, 30, 20, 40, 90, 60];
+    const array = [71, 76, 85, 7, 44, 54, 39, 65, 75, 93, 32, 21, 33, 90, 37, 69, 72, 6, 8,
+      23, 63, 88, 99, 28, 51, 19, 73, 13, 48, 22, 46, 87, 14, 79, 3, 36, 70, 25, 68,
+      60, 34, 58, 10, 2, 77, 42, 17, 61, 47, 40, 26, 52, 91, 55, 11, 100, 84, 15, 98,
+      5, 35, 64, 78, 97, 29, 30, 83, 43, 16, 81, 9, 24, 20, 18, 53, 67, 80, 31, 12, 96,
+      92, 89, 49, 50, 66, 86, 62, 82, 45, 27, 95, 59, 41, 1, 94, 38, 57, 74, 56, 4];
     const mergeSort = new MergeSort(barDisplay.displayArray.bind(barDisplay), array);
     await mergeSort.recursiveSort();
   }

@@ -7,7 +7,7 @@ body {
 }
 .array-container{
   display: flex;
-  gap: 1rem;
+  gap: 1px;
   min-height: 500px;
   padding: 10px;
   align-items: end;
@@ -15,7 +15,7 @@ body {
 
 .array-bar{
   background-color: blue;
-  min-width: 25px;
+  width: 0.75%;
 }
 
 .highlight-class{

@@ -15,7 +15,7 @@ class BaseSort {
   async display(array, highlights) {
     if (this.displayCallback) {
       this.displayCallback(array, highlights);
-      await BaseSort.delay(500);
+      await BaseSort.delay(50);
     }
   }
 }

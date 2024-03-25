@@ -11,9 +11,7 @@ class BubbleSort extends BaseSort {
         await this.display(this.array, { [i]: 'current' });
         if (this.array[i] > this.array[i + 1]) {
           await this.display(this.array, { [i]: 'swap', [i + 1]: 'swap' });
-          const temp = this.array[i];
-          this.array[i] = this.array[i + 1];
-          this.array[i + 1] = temp;
+          [this.array[i], this.array[i + 1]] = [this.array[i + 1], this.array[i]];
           swapped = true;
         }
       }
@@ -28,9 +26,7 @@ class BubbleSort extends BaseSort {
       await this.display(this.array, { [i]: 'current' });
       if (this.array[i] > this.array[i + 1]) {
         await this.display(this.array, { [i]: 'swap', [i + 1]: 'swap' });
-        const temp = this.array[i];
-        this.array[i] = this.array[i + 1];
-        this.array[i + 1] = temp;
+        [this.array[i], this.array[i + 1]] = [this.array[i + 1], this.array[i]];
       }
     }
     this.recursiveSort(n - 1);

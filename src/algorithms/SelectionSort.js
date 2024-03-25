@@ -6,16 +6,15 @@ class SelectionSort extends BaseSort {
     if (n <= 0) return;
     for (let i = 0; i < n - 1; i += 1) {
       let smallestIndex = i;
-      await this.display(this.array, { [smallestIndex]: 'current' });
       for (let j = i + 1; j < n; j += 1) {
+        await this.display(this.array, { [j]: 'current', [i]: 'swap-target' });
         if (this.array[j] < this.array[smallestIndex]) {
           smallestIndex = j;
-          await this.display(this.array, { [smallestIndex]: 'current', [i]: 'swap-target' });
+          await this.display(this.array, { [smallestIndex]: 'swap', [i]: 'swap' });
         }
       }
       if (i !== smallestIndex) {
         [this.array[i], this.array[smallestIndex]] = [this.array[smallestIndex], this.array[i]];
-        await this.display(this.array, { [smallestIndex]: 'swap', [i]: 'swap' });
       }
     }
     await this.display(this.array);

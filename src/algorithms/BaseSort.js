@@ -2,6 +2,7 @@ class BaseSort {
   constructor(displayCallback, array = []) {
     this.displayCallback = displayCallback;
     this.array = array;
+    this.skipDisplay = false;
   }
 
   setArray(newArray) {
@@ -17,6 +18,10 @@ class BaseSort {
       this.displayCallback(array, highlights);
       await BaseSort.delay(500);
     }
+  }
+
+  toggleSkipDisplay() {
+    this.skipDisplay = !this.skipDisplay;
   }
 }
 

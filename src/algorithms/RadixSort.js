@@ -2,7 +2,7 @@ import BaseSort from './BaseSort';
 
 class RadixSort extends BaseSort {
   async sort() {
-    await this.display(this.array);
+    if (!this.skipDisplay) await this.display(this.array);
     const maxDigits = this.getMaxDigits();
     for (let i = 0; i < maxDigits; i += 1) {
       await this.sortDigit(i);
@@ -23,7 +23,7 @@ class RadixSort extends BaseSort {
     });
 
     this.array = buckets.flatMap((bucket) => bucket);
-    await this.display(this.array);
+    if (!this.skipDisplay) await this.display(this.array);
   }
 }
 

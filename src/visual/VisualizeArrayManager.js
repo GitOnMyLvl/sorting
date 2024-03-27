@@ -1,4 +1,4 @@
-class DisplayBars {
+class VisualizeArrayManager {
   constructor(container) {
     this.container = container;
   }
@@ -17,4 +17,4 @@ class DisplayBars {
   }
 }
 
-export default DisplayBars;
+export default VisualizeArrayManager;

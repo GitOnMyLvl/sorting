@@ -11,34 +11,42 @@ class FormManager {
   createForm() {
     const html = `
       <form id="sortForm">
+      <div class="input-row">
         <label for="sortType">Sort Algorithm:</label>
         <select id="sortType" name="sortType">
-          <option value="QuickSort">Quick Sort</option>
-          <option value="MergeSort">Merge Sort</option>
-          <option value="BubbleSort">Bubble Sort</option>
-          <option value="SelectionSort">Selection Sort</option>
-          <option value="InsertionSort">Insertion Sort</option>
-          <option value="HeapSort">Heap Sort</option>
-          <option value="RadixSort">Radix Sort</option>
+        <option value="QuickSort">Quick Sort</option>
+        <option value="MergeSort">Merge Sort</option>
+        <option value="BubbleSort">Bubble Sort</option>
+        <option value="SelectionSort">Selection Sort</option>
+        <option value="InsertionSort">Insertion Sort</option>
+        <option value="HeapSort">Heap Sort</option>
+        <option value="RadixSort">Radix Sort</option>
         </select>
-        
+      </div>  
+      <div class="input-row">
         <label for="arraySize">Array Size:</label>
         <input type="number" id="arraySize" name="arraySize" min="5" max="100" value="15"> 
-        
+      </div>
+      <div class="input-row">
         <label for="displayDelay">Display Delay (ms):</label>
         <input type="number" id="displayDelay" name="displayDelay" value="500" min="0" max="10000">
+      </div>
 
+      <div class="checkbox-row">
         <label for="recursive">Use Recursive:</label>
         <input type="checkbox" id="recursive" name="recursive">
 
         <label for="allowDuplicates">Allow Duplicates:</label>
         <input type="checkbox" id="allowDuplicates" name="allowDuplicates">
+      </div>
 
+      <div class="button-row">
         <button type="submit">Start</button>
         <button type="button" id="skip">Skip</button>
+      </div>
 
-        </form>
-        <div id="algorithmDescription"></div>
+      <div id="algorithmDescription"></div>
+      </form>
     `;
 
     this.container.innerHTML = html;

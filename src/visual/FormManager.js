@@ -38,20 +38,38 @@ class FormManager {
         <button type="button" id="skip">Skip</button>
 
         </form>
+        <div id="algorithmDescription"></div>
     `;
 
     this.container.innerHTML = html;
   }
 
   setupEventListeners() {
+    const descriptions = {
+      QuickSort: 'Quick Sort is a divide and conquer algorithm that picks an element as pivot and partitions the given array around the picked pivot. The key process in quickSort is partition.',
+      MergeSort: 'Merge Sort is a divide and conquer algorithm that divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.',
+      BubbleSort: 'Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.',
+      SelectionSort: 'Selection Sort divides the input list into two parts: items already sorted and items remaining to be sorted. The algorithm selects the smallest/largest element from the unsorted list in each iteration.',
+      InsertionSort: 'Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It places the current element at its correct position in the sorted array.',
+      HeapSort: 'Heap Sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end.',
+      RadixSort: 'Radix Sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value. (only simple visualization)',
+    };
+
     const form = document.getElementById('sortForm');
+    const sortDropdown = document.getElementById('sortType');
+    const algorithmDescription = document.getElementById('algorithmDescription');
     const skipButton = document.getElementById('skip');
+    algorithmDescription.innerHTML = descriptions[sortDropdown.value];
+
+    sortDropdown.addEventListener('change', () => {
+      algorithmDescription.innerHTML = descriptions[sortDropdown.value];
+    });
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const sortType = document.getElementById('sortType').value;
       const arraySize = document.getElementById('arraySize').value;
       const displayDelay = document.getElementById('displayDelay').value;
+      const sortType = document.getElementById('sortType').value;
       const recursive = document.getElementById('recursive').checked;
       const allowDuplicates = document.getElementById('allowDuplicates').checked;
       let array = [];

@@ -1,4 +1,4 @@
-function generateRandomArray(n) {
+function generateRandomUniqueArray(n) {
   const set = new Set();
   while (set.size < n) {
     const randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -7,6 +7,8 @@ function generateRandomArray(n) {
   return Array.from(set);
 }
 
-export default generateRandomArray;
-export const arrayTo10 = Array.from({ length: 10 }, (_, i) => i + 1);
-export const arrayTo100 = Array.from({ length: 100 }, (_, i) => i + 1);
+function generateRandomArray(n) {
+  return Array.from({ length: n }, () => Math.floor(Math.random() * 100) + 1);
+}
+
+export { generateRandomUniqueArray, generateRandomArray };

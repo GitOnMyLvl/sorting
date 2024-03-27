@@ -1,4 +1,4 @@
-import generateRandomArray from '../handlers/arrayUtilities';
+import { generateRandomArray, generateRandomUniqueArray } from '../handlers/arrayUtilities';
 
 class FormManager {
   constructor(container, sortManager) {
@@ -49,9 +49,12 @@ class FormManager {
       const sortType = document.getElementById('sortType').value;
       const arraySize = document.getElementById('arraySize').value;
       const recursive = document.getElementById('recursive').checked;
-      const array = generateRandomArray(arraySize);
-      // const allowDuplicates = document.getElementById('allowDuplicates').checked;
-      console.log(sortType, arraySize, recursive, array);
+      const allowDuplicates = document.getElementById('allowDuplicates').checked;
+      let array = [];
+      if (allowDuplicates) array = generateRandomArray(arraySize);
+      else array = generateRandomUniqueArray(arraySize);
+
+      console.log(sortType, arraySize, recursive, array, allowDuplicates);
 
       this.sortManager.performSorting(sortType, array, recursive);
     });

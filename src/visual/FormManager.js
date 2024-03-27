@@ -25,6 +25,9 @@ class FormManager {
         <label for="arraySize">Array Size:</label>
         <input type="number" id="arraySize" name="arraySize" min="5" max="100" value="15"> 
         
+        <label for="displayDelay">Display Delay (ms):</label>
+        <input type="number" id="displayDelay" name="displayDelay" value="500" min="0" max="10000">
+
         <label for="recursive">Use Recursive:</label>
         <input type="checkbox" id="recursive" name="recursive">
 
@@ -48,15 +51,14 @@ class FormManager {
       event.preventDefault();
       const sortType = document.getElementById('sortType').value;
       const arraySize = document.getElementById('arraySize').value;
+      const displayDelay = document.getElementById('displayDelay').value;
       const recursive = document.getElementById('recursive').checked;
       const allowDuplicates = document.getElementById('allowDuplicates').checked;
       let array = [];
       if (allowDuplicates) array = generateRandomArray(arraySize);
       else array = generateRandomUniqueArray(arraySize);
 
-      console.log(sortType, arraySize, recursive, array, allowDuplicates);
-
-      this.sortManager.performSorting(sortType, array, recursive);
+      this.sortManager.performSorting(sortType, array, recursive, displayDelay);
     });
 
     skipButton.addEventListener('click', () => {

@@ -12,7 +12,7 @@ class SortManager {
     this.visualizeArray = null;
   }
 
-  performSorting(sortType, array, recursive) {
+  performSorting(sortType, array, recursive, displayDelay = 500) {
     const sortClassMap = {
       QuickSort,
       MergeSort,
@@ -28,7 +28,7 @@ class SortManager {
 
     const SortClass = sortClassMap[sortType];
     const displayArrayBound = this.visualizeArray.displayArray.bind(this.visualizeArray);
-    this.currentSortInstance = new SortClass(displayArrayBound, array);
+    this.currentSortInstance = new SortClass(displayArrayBound, array, displayDelay);
     this.currentSortInstance.sort(recursive);
   }
 

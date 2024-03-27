@@ -1,7 +1,8 @@
 class BaseSort {
-  constructor(displayCallback, array = []) {
+  constructor(displayCallback, array = [], displayDelay = 500) {
     this.displayCallback = displayCallback;
     this.array = array;
+    this.displayDelay = displayDelay;
     this.skipDisplay = false;
   }
 
@@ -16,7 +17,7 @@ class BaseSort {
   async display(array, highlights) {
     if (this.displayCallback) {
       this.displayCallback(array, highlights);
-      await BaseSort.delay(500);
+      await BaseSort.delay(this.displayDelay);
     }
   }
 

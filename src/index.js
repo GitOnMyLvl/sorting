@@ -10,4 +10,5 @@ document.addEventListener('DOMContentLoaded', () => {
   sortManager.visualizeArray = visualizeArray;
   const formContainer = document.getElementById('formContainer');
   const formManager = new FormManager(formContainer, sortManager);
+  formManager.setupEventListeners();
 });

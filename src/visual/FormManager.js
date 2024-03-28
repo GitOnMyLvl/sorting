@@ -5,7 +5,6 @@ class FormManager {
     this.container = container;
     this.sortManager = sortManager;
     this.createForm();
-    this.setupEventListeners();
   }
 
   createForm() {

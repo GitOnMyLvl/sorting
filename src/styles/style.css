@@ -38,7 +38,8 @@ header, footer{
   flex-direction: column;
   gap: 20px;
   max-width: 600px; /* Adjust based on your preference */
-  margin: 0 auto;
+  width: 98%;
+  margin: 0.5rem auto;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   background-color: #fff;
@@ -100,7 +101,6 @@ button#skip:hover {
 }
 
 #algorithmDescription {
-  margin-top: 20px;
   padding: 10px;
   background-color: #e9ecef;
   border-radius: 5px;
@@ -108,16 +108,23 @@ button#skip:hover {
 
 .array-container{
   display: flex;
+  flex: 1;
   gap: 1px;
-  min-height: 500px;
+  min-height: 200px;
   padding: 10px;
   align-items: end;
-  width: auto;
+  justify-content: center;
+  width: 98%;
+  margin: 0.5rem auto;  
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
 }
 
 .array-bar{
   background-color: blue;
-  width: 0.75%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  min-height: 2px;
 }
 
 .highlight-class{

@@ -10,6 +10,10 @@ class BaseSort {
     this.array = [...newArray];
   }
 
+  getArray() {
+    return this.array;
+  }
+
   static delay(ms) {
     return new Promise((resolve) => { setTimeout(resolve, ms); });
   }

@@ -1,4 +1,6 @@
 import { generateRandomArray, generateRandomUniqueArray } from '../handlers/arrayUtilities';
+import Less from '../images/less.svg';
+import More from '../images/more.svg';
 
 class FormManager {
   constructor(container, sortManager) {
@@ -9,7 +11,12 @@ class FormManager {
 
   createForm() {
     const html = `
+    <div class="form-container">
+    <div class="minimize">
+        <img src="${Less}" alt="Less">
+      </div>
       <form id="sortForm">
+      
       <div class="input-row">
         <label for="sortType">Sort Algorithm:</label>
         <select id="sortType" name="sortType">
@@ -46,6 +53,7 @@ class FormManager {
 
       <div id="algorithmDescription"></div>
       </form>
+    </div>
     `;
 
     this.container.innerHTML = html;
@@ -65,7 +73,9 @@ class FormManager {
     const form = document.getElementById('sortForm');
     const sortDropdown = document.getElementById('sortType');
     const algorithmDescription = document.getElementById('algorithmDescription');
+    const minimizeButton = document.querySelector('.minimize');
     const skipButton = document.getElementById('skip');
+    form.classList.add('sortForm');
     algorithmDescription.innerHTML = descriptions[sortDropdown.value];
 
     sortDropdown.addEventListener('change', () => {
@@ -84,6 +94,16 @@ class FormManager {
       else array = generateRandomUniqueArray(arraySize);
 
       this.sortManager.performSorting(sortType, array, recursive, displayDelay);
+    });
+
+    minimizeButton.addEventListener('click', () => {
+      form.classList.toggle('minimized');
+      if (form.classList.contains('minimized')) {
+        minimizeButton.innerHTML = `<img src="${More}" alt="More">`;
+      } else {
+        minimizeButton.innerHTML = `<img src="${Less}" alt="Less">`;
+      }
+      this.sortManager.displayCurrentArray();
     });
 
     skipButton.addEventListener('click', () => {

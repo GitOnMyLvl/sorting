@@ -11,6 +11,7 @@ class RadixSort extends BaseSort {
   }
 
   getMaxDigits() {
+    // finds the number of digits of the largest number
     return this.array.reduce((max, n) => Math.max(max, Math.floor(Math.log10(Math.abs(n))) + 1), 0);
   }
 
@@ -22,6 +23,7 @@ class RadixSort extends BaseSort {
       buckets[bucketIndex].push(num);
     });
 
+    // combines the buckets back into the array
     this.array = buckets.flatMap((bucket) => bucket);
     if (!this.skipDisplay) await this.display(this.array);
   }

@@ -37,6 +37,12 @@ class SortManager {
       this.currentSortInstance.toggleSkipDisplay();
     }
   }
+
+  displayCurrentArray() {
+    if (this.currentSortInstance) {
+      this.currentSortInstance.displayCallback(this.currentSortInstance.array);
+    }
+  }
 }
 
 export default SortManager;

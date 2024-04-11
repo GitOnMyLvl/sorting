@@ -11,15 +11,15 @@ class FormManager {
 
   createForm() {
     const html = `
-    <div class="form-container">
+    <div class="container">
     <div class="minimize">
         <img src="${Less}" alt="Less">
       </div>
       <form id="sortForm">
       
       <div class="input-row">
-        <label for="sortType">Sort Algorithm:</label>
-        <select id="sortType" name="sortType">
+        <label for="sortType" class="sort__text form__text">Sort Algorithm:</label>
+        <select id="sortType" name="sortType" class="sort__select form__select">
         <option value="QuickSort">Quick Sort</option>
         <option value="MergeSort">Merge Sort</option>
         <option value="BubbleSort">Bubble Sort</option>
@@ -30,28 +30,31 @@ class FormManager {
         </select>
       </div>  
       <div class="input-row">
-        <label for="arraySize">Array Size:</label>
-        <input type="number" id="arraySize" name="arraySize" min="5" max="100" value="15"> 
+        <label for="arraySize" class="array__text form__text">Array Size:</label>
+        <input type="number" id="arraySize" name="arraySize" min="5" max="100" value="15" class="array__input form__input"> 
       </div>
       <div class="input-row">
-        <label for="displayDelay">Display Delay (ms):</label>
-        <input type="number" id="displayDelay" name="displayDelay" value="500" min="0" max="10000">
+        <label for="displayDelay" class="delay__text form__text">Display Delay (ms):</label>
+        <input type="number" id="displayDelay" name="displayDelay" value="500" min="0" max="10000" class="delay__input form__input">
       </div>
 
       <div class="checkbox-row">
-        <label for="recursive">Use Recursive:</label>
-        <input type="checkbox" id="recursive" name="recursive">
-
-        <label for="allowDuplicates">Allow Duplicates:</label>
-        <input type="checkbox" id="allowDuplicates" name="allowDuplicates">
+        <div class="form-checkbox recursive-checkbox">
+          <label for="recursive" class="checkbox__text">Use Recursive: (when available)</label>
+          <input type="checkbox" id="recursive" name="recursive" class="checkbox">
+        </div>
+        <div class="form-checkbox duplicate-checkbox">
+          <label for="allowDuplicates" class="checkbox__text">Allow Duplicates:</label>
+          <input type="checkbox" id="allowDuplicates" name="allowDuplicates" class="checkbox">
+        </div>
       </div>
 
       <div class="button-row">
-        <button type="submit">Start</button>
-        <button type="button" id="skip">Skip</button>
+        <button type="submit" class="submit-btn btn">Start</button>
+        <button type="button" id="skip" class="skip-btn btn">Skip</button>
       </div>
 
-      <div id="algorithmDescription"></div>
+      <div id="algorithm-description" class="algorithm-description"></div>
       </form>
     </div>
     `;
@@ -72,7 +75,7 @@ class FormManager {
 
     const form = document.getElementById('sortForm');
     const sortDropdown = document.getElementById('sortType');
-    const algorithmDescription = document.getElementById('algorithmDescription');
+    const algorithmDescription = document.getElementById('algorithm-description');
     const minimizeButton = document.querySelector('.minimize');
     const skipButton = document.getElementById('skip');
     form.classList.add('sortForm');

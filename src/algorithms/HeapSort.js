@@ -1,4 +1,3 @@
-/* eslint-disable no-await-in-loop */
 import BaseSort from './BaseSort';
 
 class HeapSort extends BaseSort {

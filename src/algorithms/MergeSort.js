@@ -4,7 +4,7 @@ class MergeSort extends BaseSort {
   async mergeSort(start = 0, end = this.array.length - 1) {
     if (start >= end) return;
     const middle = Math.floor((start + end) / 2);
-    const preSortHighlights = { [start]: 'swap-target', [middle]: 'current', [end]: 'pivot' };
+    const preSortHighlights = { [start]: 'array-begin', [middle]: 'current', [end]: 'marked' };
     if (!this.skipDisplay) await this.display(this.array, preSortHighlights);
 
     await this.mergeSort(start, middle);

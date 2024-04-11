@@ -23,12 +23,12 @@ class HeapSort extends BaseSort {
     if (!this.skipDisplay) await this.display(this.array, { [i]: 'current' });
     if (left < n && this.array[left] > this.array[largest]) {
       largest = left;
-      if (!this.skipDisplay) await this.display(this.array, { [i]: 'current', [largest]: 'swap-target' });
+      if (!this.skipDisplay) await this.display(this.array, { [i]: 'current', [largest]: 'marked' });
     }
 
     if (right < n && this.array[right] > this.array[largest]) {
       largest = right;
-      if (!this.skipDisplay) await this.display(this.array, { [i]: 'current', [largest]: 'swap-target' });
+      if (!this.skipDisplay) await this.display(this.array, { [i]: 'current', [largest]: 'marked' });
     }
     if (largest !== i) {
       if (!this.skipDisplay) await this.display(this.array, { [i]: 'swap', [largest]: 'swap' });

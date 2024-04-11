@@ -17,13 +17,13 @@ class QuickSort extends BaseSort {
     for (let j = start; j < end; j += 1) {
       if (pivot >= this.array[j]) {
         i += 1;
-        if (!this.skipDisplay) await this.display(this.array, { [i]: 'swap', [j]: 'swap', [end]: 'pivot' });
+        if (!this.skipDisplay) await this.display(this.array, { [i]: 'swap', [j]: 'swap', [end]: 'marked' });
         [this.array[i], this.array[j]] = [this.array[j], this.array[i]];
       }
-      const highlights = { [i]: 'swap-target', [j]: 'current', [end]: 'pivot' };
+      const highlights = { [i]: 'swap-target', [j]: 'current', [end]: 'marked' };
       if (!this.skipDisplay) await this.display(this.array, highlights);
     }
-    const finalHighlights = { [i + 1]: 'pivot-final', [end]: 'pivot-final' };
+    const finalHighlights = { [i + 1]: 'swap', [end]: 'swap' };
     if (!this.skipDisplay) await this.display(this.array, finalHighlights);
     [this.array[i + 1], this.array[end]] = [this.array[end], this.array[i + 1]];
     return i + 1;

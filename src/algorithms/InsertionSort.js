@@ -9,12 +9,12 @@ class InsertionSort extends BaseSort {
       let j = i - 1;
       if (!this.skipDisplay) await this.display(this.array, { [i]: 'current' });
       while (this.array[j] > current && j >= 0) {
-        if (!this.skipDisplay) await this.display(this.array, { [j]: 'shifting', [i]: 'current' });
+        if (!this.skipDisplay) await this.display(this.array, { [j]: 'current', [i]: 'marked' });
         this.array[j + 1] = this.array[j];
         j -= 1;
       }
       this.array[j + 1] = current;
-      if (!this.skipDisplay) await this.display(this.array, { [j + 1]: 'placed' });
+      if (!this.skipDisplay) await this.display(this.array, { [j + 1]: 'swap' });
     }
   }
 
@@ -25,12 +25,12 @@ class InsertionSort extends BaseSort {
     let j = n - 2;
     if (!this.skipDisplay) await this.display(this.array, { [n - 1]: 'current' });
     while (this.array[j] > current && j >= 0) {
-      if (!this.skipDisplay) await this.display(this.array, { [j]: 'shifting', [n - 1]: 'current' });
+      if (!this.skipDisplay) await this.display(this.array, { [j]: 'current', [n - 1]: 'marked' });
       this.array[j + 1] = this.array[j];
       j -= 1;
     }
     this.array[j + 1] = current;
-    if (!this.skipDisplay) await this.display(this.array, { [j + 1]: 'placed' });
+    if (!this.skipDisplay) await this.display(this.array, { [j + 1]: 'swap' });
   }
 
   async sort(recursive) {

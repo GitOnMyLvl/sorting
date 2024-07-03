@@ -48,7 +48,7 @@ header, footer{
   display: flex;
   flex-direction: column;
   gap: 1em;
-  background-color: var(--tertiary);
+  background: linear-gradient(90deg, var(--primary), var(--tertiary));
   color: var(--secondary);
   padding: 1em;
 }
@@ -164,6 +164,7 @@ header, footer{
   display: flex;
   height: 100%;
   width: 90%;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 1px;
   min-height: 300px;
@@ -198,4 +199,14 @@ header, footer{
 
 .array-begin{
   background: linear-gradient(to bottom, var(--submit), var(--submit-complement));
+}
+
+footer a{
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+footer a:visited{
+  color: var(--primary);
 }

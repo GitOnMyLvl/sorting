@@ -30,7 +30,7 @@ class FormManager {
         </select>
       </div>  
       <div class="input-row">
-        <label for="arraySize" class="array__text form__text">Array Size:</label>
+        <label for="arraySize" class="array__text form__text">Array Size: (5-100)</label>
         <input type="number" id="arraySize" name="arraySize" min="5" max="100" value="15" class="array__input form__input"> 
       </div>
       <div class="input-row">

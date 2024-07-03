@@ -1,7 +1,7 @@
 # Sorting Visualizer
 
 [![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/GitOnMyLvl/sorting/blob/main/README.md)
-[![de](https://img.shields.io/badge/lang-de-yellow.svg)](https://github.com/GitOnMyLvl/sorting/blob/main/README_DE.md)
+[![de](https://img.shields.io/badge/lang-de-yellow.svg)](https://github.com/GitOnMyLvl/sorting/blob/main/README.de.md)
 
 ## Summary
 Sorting Visualizer is a project to visualize different sorting algorithms. Users can choose between sorting algorithms, change the size of the array and the delay, choose if the array can use duplicate values and if the recursive version of the algorithm is used (if possible/implemented)

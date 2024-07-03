@@ -1,5 +1,8 @@
 # Sorting Visualizer
 
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/GitOnMyLvl/sorting/blob/main/README.md)
+[![de](https://img.shields.io/badge/lang-de-yellow.svg)](https://github.com/GitOnMyLvl/sorting/blob/main/README.de.md)
+
 ## Beschreibung
 Sorting Visualizer ist ein Project zum Visualisieren von verschiedenen Sortieralgorithmen. Benutzer können verschiedene Sortieralgorithmen auswählen, die größe des Arrays festlegen, die Anzeigeverzögerung anpassen und wählen, ob doppelte Werte im Array vorkommen dürfen und ob die rekursive Version des Algorithmen (falls vorhanden/möglich) verwendet werden soll.
 

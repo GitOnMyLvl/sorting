@@ -13,7 +13,7 @@ class FormManager {
     const html = `
     <div class="container">
     <div class="minimize">
-        <img src="${Less}" alt="Less">
+        <img class="minmax" src="${Less}" alt="Less">
       </div>
       <form id="sortForm">
       
@@ -40,7 +40,7 @@ class FormManager {
 
       <div class="checkbox-row">
         <div class="form-checkbox recursive-checkbox">
-          <label for="recursive" class="checkbox__text">Use Recursive: (when available)</label>
+          <label for="recursive" class="checkbox__text">Use Recursive (when available):</label>
           <input type="checkbox" id="recursive" name="recursive" class="checkbox">
         </div>
         <div class="form-checkbox duplicate-checkbox">
@@ -67,7 +67,7 @@ class FormManager {
       QuickSort: 'Quick Sort is a divide and conquer algorithm that picks an element as pivot and partitions the given array around the picked pivot. The key process in quickSort is partition.',
       MergeSort: 'Merge Sort is a divide and conquer algorithm that divides input array in two halves, calls itself for the two halves and then merges the two sorted halves.',
       BubbleSort: 'Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.',
-      SelectionSort: 'Selection Sort divides the input list into two parts: items already sorted and items remaining to be sorted. The algorithm selects the smallest/largest element from the unsorted list in each iteration.',
+      SelectionSort: 'Selection Sort divides the input list into two parts: items already sorted and items remaining to be sorted. The algorithm swaps the smallest and largest element from the unsorted list in each iteration.',
       InsertionSort: 'Insertion Sort is a simple sorting algorithm that builds the final sorted array one item at a time. It places the current element at its correct position in the sorted array.',
       HeapSort: 'Heap Sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the maximum element and place the maximum element at the end.',
       RadixSort: 'Radix Sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value. (only simple visualization)',
@@ -87,8 +87,8 @@ class FormManager {
 
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const arraySize = document.getElementById('arraySize').value;
-      const displayDelay = document.getElementById('displayDelay').value;
+      const arraySize = parseInt(document.getElementById('arraySize').value, 10);
+      const displayDelay = parseInt(document.getElementById('displayDelay').value, 10);
       const sortType = document.getElementById('sortType').value;
       const recursive = document.getElementById('recursive').checked;
       const allowDuplicates = document.getElementById('allowDuplicates').checked;
@@ -102,9 +102,9 @@ class FormManager {
     minimizeButton.addEventListener('click', () => {
       form.classList.toggle('minimized');
       if (form.classList.contains('minimized')) {
-        minimizeButton.innerHTML = `<img src="${More}" alt="More">`;
+        minimizeButton.innerHTML = `<img src="${More}" alt="More" class="minmax">`;
       } else {
-        minimizeButton.innerHTML = `<img src="${Less}" alt="Less">`;
+        minimizeButton.innerHTML = `<img src="${Less}" alt="Less"> class="minmax"`;
       }
       this.sortManager.displayCurrentArray();
     });

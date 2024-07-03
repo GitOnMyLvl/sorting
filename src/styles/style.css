@@ -72,7 +72,11 @@ header, footer{
   justify-content: flex-end;
 }
 
-
+.minmax{
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+}
 
 .sortForm{
   display: flex;

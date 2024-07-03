@@ -43,41 +43,6 @@ To start tests and see code-coverage use:
 npm test
 ```
 
-## Code structure
-
-sorting/
-├── src/
-│   ├── algorithms/
-│   │   ├── BaseSort.js
-│   │   ├── BubbleSort.js
-│   │   ├── HeapSort.js
-│   │   ├── InsertionSort.js
-│   │   ├── MergeSort.js
-│   │   ├── QuickSort.js
-│   │   ├── RadixSort.js
-│   │   └── SelectionSort.js
-│   ├── handlers/
-│   │   ├── SortManager.js
-│   │   └── arrayUtilities.js
-├── │ images/
-│   │   ├── less.svg
-│   │   └── more.svg
-│   ├── screens/
-│   │   ├── FormManager.js
-│   │   └── VisualizeArrayManager.js
-│   ├── styles/
-│   │   └──style.css
-│   ├── index.html
-│   └── index.js
-├── tests/
-│   ├── arrayUtilities.test.js
-│   ├── BaseSort.test.js
-│   ├── FormManager.test.js
-│   ├── sortAlgorithmTests.js
-│   ├── SortAlgorithmTests.test.js
-│   ├── SortManager.test.js
-│   └── VisualizeArrayManager.test.js
-
 ## License
 This project is licensed under the ISC licence. See LICENCE.md file
 

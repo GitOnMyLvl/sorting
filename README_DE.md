@@ -43,41 +43,6 @@ Um Test auszuführen und die Code-Abdeckung zu sehen, verwenden Sie folgenden Be
 npm test
 ```
 
-## Verzeichnisstruktur
-
-sorting/
-├── src/
-│   ├── algorithms/
-│   │   ├── BaseSort.js
-│   │   ├── BubbleSort.js
-│   │   ├── HeapSort.js
-│   │   ├── InsertionSort.js
-│   │   ├── MergeSort.js
-│   │   ├── QuickSort.js
-│   │   ├── RadixSort.js
-│   │   └── SelectionSort.js
-│   ├── handlers/
-│   │   ├── SortManager.js
-│   │   └── arrayUtilities.js
-├── │ images/
-│   │   ├── less.svg
-│   │   └── more.svg
-│   ├── screens/
-│   │   ├── FormManager.js
-│   │   └── VisualizeArrayManager.js
-│   ├── styles/
-│   │   └──style.css
-│   ├── index.html
-│   └── index.js
-├── tests/
-│   ├── arrayUtilities.test.js
-│   ├── BaseSort.test.js
-│   ├── FormManager.test.js
-│   ├── sortAlgorithmTests.js
-│   ├── SortAlgorithmTests.test.js
-│   ├── SortManager.test.js
-│   └── VisualizeArrayManager.test.js
-
 ## Lizenz
 Dieses Project is lizenziert durch die ISC Lizenz. Siehe LICENSE.md
 

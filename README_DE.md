@@ -11,13 +11,13 @@ Sorting Visualizer ist ein Project zum Visualisieren von verschiedenen Sortieral
 
 ## Live-Demo
 Eine Live-Demo des Projectes gibt es hier:
-`https://gitonmylvl.github.io/sorting/`
+'https://gitonmylvl.github.io/sorting/'
 
 ## Installation
 
 1. **Repository klonen**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/GitOnMyLvl/sorting.git
    cd sorting
    ```
 2. **Abhängikeiten installieren**
@@ -31,7 +31,7 @@ Eine Live-Demo des Projectes gibt es hier:
 
 ## Verwendung
 
-1. Wenn sich nicht der Webbrowser automatisch öffnet navigieren sie zu 'http://localhost:3000'.
+1. Wenn sich nicht der Webbrowser automatisch öffnet navigieren sie zu 'http://localhost:9000'.
 2. Wählen sie eine Algorithmus aus dem Formular.
 3. Passen Sie die Array-Größe, die Anzeigeverzögerung und andere Optionen an.
 4. Klicken Sie auf den 'Start' Button um die Visulisierung zu starten.

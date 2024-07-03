@@ -24,4 +24,9 @@ module.exports = {
   rules: {
     'no-await-in-loop': 'off',
   },
+  ignorePatterns: [
+    'tests/**',
+    'src/**/*.test.js',
+    'src/**/*.spec.js',
+  ],
 };

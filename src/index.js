@@ -1,7 +1,7 @@
 import './styles/style.css';
 import SortManager from './handlers/SortManager';
-import FormManager from './visual/FormManager';
-import VisualizeArrayManager from './visual/VisualizeArrayManager';
+import FormManager from './screens/FormManager';
+import VisualizeArrayManager from './screens/VisualizeArrayManager';
 
 document.addEventListener('DOMContentLoaded', () => {
   const sortManager = new SortManager();

@@ -18,7 +18,8 @@
   
     
   "dev": "webpack --watch --mode development",
-
+  
+    
   "start": "webpack serve --mode development --open"
   
   },

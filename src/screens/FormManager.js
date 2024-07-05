@@ -104,7 +104,7 @@ class FormManager {
       if (form.classList.contains('minimized')) {
         minimizeButton.innerHTML = `<img src="${More}" alt="More" class="minmax">`;
       } else {
-        minimizeButton.innerHTML = `<img src="${Less}" alt="Less"> class="minmax"`;
+        minimizeButton.innerHTML = `<img src="${Less}" alt="Less" class="minmax"> `;
       }
       this.sortManager.displayCurrentArray();
     });
